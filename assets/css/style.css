@@ -1,0 +1,496 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.background {
+  width: 100vw; /* Make the background cover 100% of the viewport width */
+  height: 100vh; /* Make the background cover 100% of the viewport height */
+  background-size: cover;
+  background-image: url("../images/background_3x.png"); /* Replace with your image path */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+/* Title above the second layer */
+.title {
+  position: absolute;
+  top: 25px; /* Adjust vertical position */
+  left: 52%;
+  transform: translateX(-50%); /* Center the title horizontally */
+  width: 50%; /* Adjust width based on image size */
+  text-align: center;
+}
+
+.title img {
+  width: 30%; /* Set the width of the image to 40% of the container */
+  max-width: 400px; /* Ensure it doesn't exceed a certain size */
+  height: auto; /* Maintain the aspect ratio */
+}
+
+/* Second layer */
+.second-layer {
+  position: absolute;
+  top: 0;
+  width: 100%; /* Start with full width */
+  height: 100%; /* Start with full height */
+  background-image: url("../images/window-image-3x.png"); /* Replace with the second image */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden; /* Prevent content from overflowing */
+  display: flex; /* To center the content horizontally */
+  justify-content: center; /* Horizontally center the image */
+  align-items: center; /* Vertically center the image within the container */
+}
+
+.second-layer-2 {
+  background-image: url("../images/nonshengping-background.png"); /* Replace with the second image */
+}
+
+/* Scrollable container inside the second layer */
+.scroll-container {
+  width: 900px; /* Adjust to fit the container width */
+  max-height: 70%; /* Ensure the image doesn't exceed the second layer's height */
+  overflow-y: scroll; /* Enable vertical scrolling */
+  overflow-x: hidden; /* Disable horizontal scrolling */
+  margin: 0 auto;
+  position: relative;
+  left: 30px;
+  top: 4px;
+  padding-right: 10px; /* Add padding to the right for aesthetics */
+  /* border: 1px solid gray; */
+}
+
+.scroll-container::-webkit-scrollbar {
+  width: 18px; /* Make the scrollbar thicker */
+}
+
+.scroll-container::-webkit-scrollbar-track {
+  background-color: gray; /* Gray track */
+}
+
+.scroll-container::-webkit-scrollbar-thumb {
+  background-color: rgba(133, 76, 76, 0.932); /* Brown scrollbar */
+  border-radius: 10px; /* Rounded corners for aesthetics */
+  border: 4px solid transparent; /* Add some padding around the thumb */
+  background-clip: padding-box; /* Ensure the padding stays inside the scrollbar */
+}
+
+/* Tall image that can be scrolled */
+.scroll-container img {
+  width: 100%; /* Make the image fit the width of the container */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: contain; /* Ensure the image stays inside the container */
+}
+
+/* Third layer in the top-left corner of the second layer */
+.third-layer {
+  position: absolute;
+  top: 102px;
+  left: 235px;
+  width: 15%; /* Adjust to the size of the third layer */
+  height: 15%; /* Adjust to the size of the third layer */
+  background-image: url("../images/decoration-image-3x.png"); /* Replace with the third image */
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 100%;
+  fill: 100%;
+}
+
+/* Button Container */
+.button-container {
+  position: absolute;
+  bottom: 12px; /* Adjust the vertical position of the buttons */
+  left: 53%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 35px; /* Space between buttons */
+  justify-content: center;
+}
+
+/* Image Button Style */
+.image-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.image-btn img {
+  width: 180px; /* Set button image size */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.image-btn img:hover {
+  opacity: 0.8; /* Add hover effect */
+}
+
+.mingzuo-container,
+.liusheng-container,
+.chuanren-container {
+  display: none;
+  position: relative; /* Allows the container to be moved */
+  top: 20px; /* Move the container 20px down */
+  left: 30px; /* Move the container 20px to the right */
+}
+
+.mingzuo-container .button-grid,
+.liusheng-container .button-grid,
+.chuanren-container .button-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 30px; /* Space between rows */
+}
+
+.mingzuo-container .row,
+.liusheng-container .row,
+.chuanren-container .row {
+  display: flex;
+  justify-content: center;
+  gap: 25px; /* Space between buttons in a row */
+}
+
+.mingzuo-image-btn,
+.liusheng-image-btn,
+.chuanren-image-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.mingzuo-image-btn img,
+.liusheng-image-btn img,
+.chuanren-image-btn img {
+  width: 250px; /* Adjust the size of the button images */
+  height: auto;
+}
+
+.mingzuo-image-btn img:hover,
+.liusheng-image-btn img:hover,
+.chuanren-image-btn img:hover {
+  opacity: 0.8; /* Add hover effect */
+}
+
+/* Mingzuo Detail */
+#mingzuo-detail {
+  display: flex;
+  flex-direction: row; /* Stack the title/text and images vertically */
+  justify-content: space-between;
+  align-items: center;
+  width: 68%; /* Adjust to fit within the second layer */
+  /* max-height: 100%; Prevent overflow */
+  height: 450px;
+  padding: 20px;
+  /* background-color: rgba(255, 255, 255, 0.8);  */
+  /* border: 2px solid black; Border to visualize the container */
+  border-radius: 8px;
+  box-sizing: border-box;
+  margin-left: 65px;
+}
+
+/* Title and Text Section */
+.mingzuo-left {
+  flex: 1;
+  /* width: 40%; */
+  height: 90%;
+  margin-bottom: 0; /* Space between title/text and images */
+  color: rgb(108, 31, 31); /* Brown color for title and text */
+  text-align: justify;
+}
+
+.mingzuo-left h1 {
+  font-size: 36px; /* Size for title */
+  margin: 0;
+  font-weight: bold;
+  border-bottom: 2px solid brown; /* Underline effect for title */
+  padding-bottom: 10px;
+  width: 100%;
+}
+
+.mingzuo-left p {
+  font-size: 18px; /* Size for text */
+  margin-top: 10px;
+  text-indent: 2em;
+  line-height: 1.6; /* Space between lines */
+  text-align: justify;
+}
+
+/* Image Section */
+.mingzuo-right {
+  display: flex;
+  justify-content: center; /* Centers the images horizontally */
+  align-items: flex-start;
+  width: 48%;
+}
+
+.mingzuo-image-wrapper {
+  flex: 1;
+  height: 300px;
+  position: relative;
+  overflow: hidden;
+}
+
+.mingzuo-image-wrapper img {
+  width: 100%; /* Image width */
+  height: 100%;
+  margin-left: 15px;
+  object-fit: cover; /* Ensure images cover their container neatly */
+  position: absolute;
+}
+
+/* Music Player Style */
+.audio-player {
+  display: flex;
+  flex-direction: column; /* Stack player-upper and player-lower vertically */
+  width: 1000px;
+  height: 400px;
+  margin-left: 65px;
+  position: relative;
+}
+
+.player-upper {
+  display: flex; /* Aligns left and right sections horizontally */
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.left-section {
+  position: relative;
+  align-items: center;
+  width: 380px;
+  height: 290px;
+}
+
+.cover-image {
+  position: relative;
+}
+
+.player-disk {
+  top: 45px;
+  width: 200px;
+  height: auto;
+  position: absolute;
+  left: 180px;
+  z-index: 1;
+}
+
+.cover-logo {
+  width: 210px;
+  height: auto;
+  top: 38px;
+  object-fit: cover;
+  position: absolute;
+  left: 75px;
+  z-index: 2;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  margin-top: 265px; /* Position below the disk and cover */
+}
+
+.circle-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+.circle-btn svg {
+  width: 60px; /* Adjust the button size */
+  height: 60px;
+}
+
+.circle-btn svg circle {
+  transition: fill 0.2s ease;
+}
+
+.circle-btn:hover svg circle {
+  fill: rgba(92, 64, 51, 0.2); /* Light brown hover effect */
+}
+
+.right-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 290px; /* Matches the height of left-section */
+  padding-left: 20px;
+  flex: 1;
+}
+
+.music-info {
+  color: #5c4033;
+  flex: 1;
+}
+
+.title-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 40%;
+  padding-bottom: 0;
+  border-bottom: 2px solid #5c4033;
+}
+
+.title-info h3 {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.title-info p {
+  font-size: 12px;
+}
+
+.publisher {
+  text-align: right;
+}
+
+.description {
+  text-align: left;
+  margin-top: 10px;
+  height: 60%;
+}
+
+.volume-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 0;
+}
+
+#volumeControl {
+  transform: rotate(270deg);
+  width: 120px;
+  height: 6px; 
+  background-color: transparent;
+  appearance: none;
+}
+
+#volumeControl::-webkit-slider-runnable-track {
+  background-color: #5c4033;
+  height: 3px;
+  border-radius: 10px;
+}
+
+#volumeControl::-webkit-slider-thumb {
+  appearance: none;
+  width: 7px;
+  height: 7px;
+  background-color: #5c4033;
+  border-radius: 50%;
+  cursor: pointer;
+  transform: translateY(-2px);
+}
+
+#volumeControl::-moz-range-thumb {
+  width: 10px;
+  height: 10px;
+  background-color: #b0acaa;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+#volumeControl:focus {
+  outline: none; /* Remove focus outline */
+}
+
+#volumeControl::-webkit-slider-thumb:active {
+  background-color: #4c3627; /* Darker shade when thumb is active */
+}
+
+#volumeControl::-moz-range-thumb:active {
+  background-color: #4c3627; /* Darker shade when thumb is active */
+}
+
+.player-lower {
+  margin-top: 50px; /* Adds spacing between the player-upper and player-lower */
+  padding-left: 70px;
+}
+
+.progress-container {
+  width: 100%; /* Spans the full width */
+}
+
+#progressBar {
+  width: 95%;
+  background-color: #5c4033;
+  appearance: none;
+  height: 2px;
+}
+
+#progressBar::-webkit-slider-thumb {
+  appearance: none;
+  width: 10px;
+  height: 10px;
+  background-color: #5c4033;
+  cursor: pointer;
+}
+
+#progressBar::-moz-range-thumb {
+  width: 10px;
+  height: 10px;
+  background-color: #5c4033;
+  cursor: pointer;
+}
+
+
+/* Chuan Ren Detail */
+#chuanren-detail {
+  padding-top: 150px;
+  padding-left: 125px;
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  width: auto;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+.chuanren-left {
+  display: flex;
+  flex-direction: column;
+  width: 450px;
+  flex: 1; /* Allow the left section to take up available space */
+  color: #5C4033; /* Dark brown text color */
+  padding-bottom: 100px;
+}
+
+.chuanren-up {
+  border-bottom: 2px solid #5C4033; /* Dark brown bottom border */
+  padding-bottom: 10px; /* Space between the text and the border */
+  text-align: right;
+}
+
+.chuanren-up h1, .chuanren-up p {
+  margin: 0;
+  color: #5C4033; /* Dark brown text color */
+}
+
+.chuanren-down {
+  margin-top: 10px;
+  color: #5C4033; /* Dark brown text color */
+}
+
+.chuanren-right {
+  width: 400px;
+  height: 600px;
+  align-items: flex-end;
+  padding-left: 30px;
+  overflow: hidden;
+}
+
+.chuanren-right img {
+  height: 500px;
+  width: auto;
+  object-fit: cover;
+}

@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>梅兰芳 - 留声</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <div class="background">
+    <div class="title">
+      <img id="title-image" src="./assets/images/title-liusheng-3x.png" alt="Title Image">
+    </div>
+    <div class="second-layer">
+      <div class="third-layer"></div>
+      <div class="scroll-container" style="display: none;">
+        <img src="./assets/images/tall-image-3x.png" alt="Tall Image">
+      </div>
+      <div class="mingzuo-container" style="display: none;">
+        <div class="button-grid">
+          <!-- Row 1 -->
+          <div class="row">
+            <button class="mingzuo-image-btn" id="changEBenyue">
+              <img src="./assets/images/mingzuo/1-mingzuo-changE-3x.png" alt="Button 1">
+            </button>
+            <button class="mingzuo-image-btn" id="tianNvSaHua">
+              <img src="./assets/images/mingzuo/2-mingzuo-tiannvsahua-3x.png" alt="Button 2">
+            </button>
+            <button class="mingzuo-image-btn" id="daiYuZangHua">
+              <img src="./assets/images/mingzuo/3-mingzuo-daiyu-3x.png" alt="Button 3">
+            </button>
+          </div>
+          <!-- Row 2 -->
+          <div class="row">
+            <button class="mingzuo-image-btn" id="maGuXianShou">
+              <img src="./assets/images/mingzuo/4-mingzuo-maguxianshou-3x.png" alt="Button 4">
+            </button>
+            <button class="mingzuo-image-btn" id="muLanCongJun">
+              <img src="./assets/images/mingzuo/5-mingzuo-mulan-3x.png" alt="Button 5">
+            </button>
+            <button class="mingzuo-image-btn" id="baWangBieJi">
+              <img src="./assets/images/mingzuo/6-mingzuo-bawang-3x.png" alt="Button 6">
+            </button>
+          </div>
+          <!-- Row 3 -->
+          <div class="row">
+            <button class="mingzuo-image-btn" id="luoShen">
+              <img src="./assets/images/mingzuo/7-mingzuo-luoshen-3x.png" alt="Button 7">
+            </button>
+            <button class="mingzuo-image-btn" id="lianJinFeng">
+              <img src="./assets/images/mingzuo/8-mingzuo-kangjin-3x.png" alt="Button 8">
+            </button>
+            <button class="mingzuo-image-btn" id="taiZhenWaiZhuan">
+              <img src="./assets/images/mingzuo/9-mingzuo-taizhen-3x.png" alt="Button 9">
+            </button>
+          </div>
+          <!-- Row 4 -->
+          <div class="row">
+            <button class="mingzuo-image-btn" id="yuZhouFeng">
+              <img src="./assets/images/mingzuo/10-mingzuo-yuzhou-3x.png" alt="Button 10">
+            </button>
+            <button class="mingzuo-image-btn" id="fengHuanChao">
+              <img src="./assets/images/mingzuo/11-mingzuo-fenghuanchao-3x.png" alt="Button 11">
+            </button>
+            <button class="mingzuo-image-btn" id="kangJinBing">
+              <img src="./assets/images/mingzuo/12-mingzuo-kangjinbing-3x.png" alt="Button 12">
+            </button>
+          </div>
+          <!-- Row 5 -->
+          <div class="row">
+            <button class="mingzuo-image-btn" id="shengSiHen">
+              <img src="./assets/images/mingzuo/13-miongzuo-shengsihen-3x.png" alt="Button 13">
+            </button>
+            <button class="mingzuo-image-btn" id="muGuiYingGuaShuai">
+              <img src="./assets/images/mingzuo/14-mingzuo-muguiying-3x.png" alt="Button 14">
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="liusheng-container" style="display: none;">
+        <div class="button-grid">
+          <!-- Row 1 -->
+          <div class="row">
+            <button class="liusheng-image-btn" onclick="openPlayer('daiYuZangHua')">
+              <img src="./assets/images/liusheng/1-liusheng-daiyu-3x.png" alt="">
+            </button>
+            <button class="liusheng-image-btn" onclick="openPlayer('tanMuZuoGong')">
+              <img src="./assets/images/liusheng/2-liusheng-tanmuzuogong-3x.png" alt="">
+            </button>
+            <button class="liusheng-image-btn" onclick="openPlayer('yangGuiFei')">
+              <img src="./assets/images/liusheng/3-liusheng-yangguifei-3x.png" alt="">
+            </button>
+          </div>
+          <!-- Row 2 -->
+          <div class="row">
+            <button class="liusheng-image-btn" onclick="openPlayer('caiLouPei')">
+              <img src="./assets/images/liusheng/4-liusheng-cailoupei-3x.png" alt="">
+            </button>
+            <button class="liusheng-image-btn" onclick="openPlayer('liuYueXue')">
+              <img src="./assets/images/liusheng/5-liusheng-liuyuexue-3x.png" alt="">
+            </button>
+            <button class="liusheng-image-btn" onclick="openPlayer('wuShaoGuan')">
+              <img src="./assets/images/liusheng/6-liushneg-wushao-3x.png" alt="">
+            </button>
+          </div>
+          <!-- Row 3 -->
+          <div class="row">
+            <button class="liusheng-image-btn" onclick="openPlayer('chunDengMi')">
+              <img src="./assets/images/liusheng/7-liusheng-chundeng-3x.png" alt="">
+            </button>
+            <button class="liusheng-image-btn" onclick="openPlayer('kangJinFeng')">
+              <img src="./assets/images/liusheng/8-liusheng-kang-3x.png" alt="">
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="chuanren-container" style="display: none;">
+        <div class="button-grid">
+          <!-- Row 1 -->
+          <div class="row">
+            <button class="chuanren-image-btn" id="zhangJunQiu">
+              <img src="./assets/images/chuanren/1-zhangqiu.png" alt="">
+            </button>
+            <button class="chuanren-image-btn" id="liShiFang">
+              <img src="./assets/images/chuanren/2-lishifang.png" alt="">
+            </button>
+            <button class="chuanren-image-btn" id="liYuFu">
+              <img src="./assets/images/chuanren/3-liyufu.png" alt="">
+            </button>
+          </div>
+          <!-- Row 2 -->
+          <div class="row">
+            <button class="chuanren-image-btn" id="duJinFang">
+              <img src="./assets/images/chuanren/4-du.png" alt="">
+            </button>
+            <button class="chuanren-image-btn" id="meiBaoJiu">
+              <img src="./assets/images/chuanren/5-mei.png" alt="">
+            </button>
+            <button class="chuanren-image-btn" id="biGuYun">
+              <img src="./assets/images/chuanren/6-biguyun.png" alt="">
+            </button>
+          </div>
+          <!-- Row 3 -->
+          <div class="row">
+            <button class="chuanren-image-btn" id="chengShuoQiu">
+              <img src="./assets/images/chuanren/7-chen.png" alt="">
+            </button>
+            <button class="chuanren-image-btn" id="yanHuiZhu">
+              <img src="./assets/images/chuanren/8-yan.png" alt="">
+            </button>
+            <button class="chuanren-image-btn" id="weiLianFang">
+              <img src="./assets/images/chuanren/9-wei.png" alt="">
+            </button>
+          </div>
+        </div>
+      </div>
+      <div id="mingzuo-detail" style="display: none;">
+        <div class="mingzuo-left">
+          <h1 id="mingzuo-detail-title"></h1>
+          <p id="mingzuo-detail-text"></p>
+        </div>
+        <div class="mingzuo-right">
+          <div class="mingzuo-image-wrapper">
+            <img id="mingzuo-detail-image-1" src="" alt="">
+          </div>
+          <div class="mingzuo-image-wrapper">
+            <img id="mingzuo-detail-image-2" src="" alt="">
+          </div>
+        </div>
+      </div>
+      <div id="chuanren-detail" style="display: none;">
+        <div class="chuanren-left">
+          <div class="chuanren-up">
+            <h1 id="chuanren-detail-title"></h1>
+            <p id="chuanren-detail-year"></p>
+          </div>
+          <div class="chuanren-down">
+            <p id="chuanren-description"></p>
+          </div>
+        </div>
+        <div class="chuanren-right">
+          <img id="chuanren-image" src="" alt="Image Description">
+        </div>
+      </div>
+      <div class="audio-player">
+        <!-- Cover and play/pause buttons -->
+         <div class="player-upper">
+          <div class="left-section">
+            <div class="cover-image">
+              <img src="./assets/images/player-disk.png" alt="Album Disk" class="player-disk">
+              <img src="./assets/images/player-cover.png" alt="Album Cover" class="cover-logo">
+            </div>
+            <div class="controls">
+              <button id="playBtn" class="circle-btn">
+                <svg width="40" height="40" viewBox="0 0 100 100">
+                  <circle cx="50" cy="50" r="45" stroke="#5C4033" stroke-width="5" fill="transparent"></circle>
+                  <polygon points="40,30 70,50 40,70" fill="#5C4033"></polygon>
+                </svg>
+              </button>
+              <button id="pauseBtn" class="circle-btn">
+                <svg width="40" height="40" viewBox="0 0 100 100">
+                  <circle cx="50" cy="50" r="45" stroke="#5C4033" stroke-width="5" fill="transparent"></circle>
+                  <rect x="35" y="30" width="10" height="40" fill="#5C4033"></rect>
+                  <rect x="55" y="30" width="10" height="40" fill="#5C4033"></rect>
+                </svg>
+              </button>
+            </div>
+          </div>
+       
+           <!-- Music info and volume control -->
+           <div class="right-section">
+             <div class="music-info">
+               <div class="title-info">
+                 <h3 id="songTitle" style="font-size: 22px;">《武昭关》</h3>
+                 <p id="artistName" style="font-size: 14px;">梅兰芳 饰 马昭仪</p>
+                 <p id="publisher" style="font-size: 14px;">1924年胜利公司唱片</p>
+               </div>
+               <div class="description">
+                 <p style="font-size: 16px;">【二黄慢板】恨只恨儿祖父纲常丧尽，父纳了子的妻败坏人伦。到如今母子们无方寄命，奔天涯走地角凄凄惨惨何处安身。</p>
+               </div>
+             </div>
+             <div class="volume-container">
+                <input type="range" id="volumeControl" min="0" max="1" step="0.01" value="0.5">
+             </div>
+           </div>
+         </div>
+         <div class="player-lower">
+          <!-- Progress Bar -->
+          <div class="progress-container">
+            <input type="range" id="progressBar" value="0" step="0.1" max="100">
+          </div>
+         </div>
+         <!-- Audio element -->
+        <audio id="audio" src="./assets/audio/wuShaoGuan.mp3"></audio>
+      </div>
+    </div>
+    <!-- Buttons below the second layer -->
+    <div class="button-container">
+      <button class="image-btn" onclick="handleShanyigeBtn()">
+        <img src='./assets/images/btn-shangyishou-3x.png'>
+       </button>
+       <button class="image-btn" onclick="handleXiayigeBtn()">
+         <img src='./assets/images/btn-xiayishou-3x.png'>
+       </button>
+       <button class="image-btn" onclick="handleFanhuishouyeBtn(3)">
+         <img src='./assets/images/btn-fanhui-3x.png'>
+       </button>
+    </div>
+  </div>
+  <script>
+    function handleShanyigeBtn() {
+      window.location.href = 'liuYueXue.html';
+    }
+
+    function handleXiayigeBtn() {
+      window.location.href = 'chunDengMi.html';
+    }
+  </script>
+  <script src="./js/main.js"></script>
+</body>
+</html>
